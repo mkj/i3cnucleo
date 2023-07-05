@@ -1,0 +1,29 @@
+#![no_std]
+#![no_main]
+// for embassy main
+#![feature(type_alias_impl_trait)]
+
+use defmt::{info, warn, trace, debug, error};
+use {defmt_rtt as _, panic_probe as _};
+
+use embassy_executor::Spawner;
+use embassy_stm32::gpio::{Level, Output, Speed};
+use embassy_time::{Duration, Timer};
+
+#[embassy_executor::main]
+async fn main(_spawner: Spawner) {
+    let p = embassy_stm32::init(Default::default());
+    info!("Hello, world!");
+
+    let mut led = Output::new(p.PA5, Level::High, Speed::Low);
+
+    loop {
+        info!("high");
+        led.set_high();
+        Timer::after(Duration::from_millis(2000)).await;
+
+        info!("low");
+        led.set_low();
+        Timer::after(Duration::from_millis(2000)).await;
+    }
+}
