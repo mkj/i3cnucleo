@@ -1,5 +1,6 @@
 [target.thumbv8m.main-none-eabihf]
-runner = 'probe-rs run --chip STM32H503RBTx'
+#runner = 'probe-rs run --chip STM32H503RBTx'
+runner = 'probe-run --chip STM32H503RBTx  --shorten-paths'
 
 [build]
 target = "thumbv8m.main-none-eabihf"

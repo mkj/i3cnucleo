@@ -19,8 +19,15 @@ cortex-m-rt = "0.7.0"
 panic-probe = { version = "0.3", features = ["print-defmt"] }
 
 [patch.crates-io]
-embassy-time = { git = "https://github.com/embassy-rs/embassy", rev = "99b4ea7c1dd5d2d10020ae569b878231c6c00524" }
-embassy-stm32 = { git = "https://github.com/embassy-rs/embassy", rev = "99b4ea7c1dd5d2d10020ae569b878231c6c00524" }
+# other embassy crates are OK from crates.io
+
+embassy-time = { git = "https://github.com/mkj/embassy", branch = "stm32-i3c" }
+embassy-stm32 = { git = "https://github.com/mkj/embassy", branch = "stm32-i3c" }
+stm32-metapac = { git = "https://github.com/mkj/stm32-data-generated", branch = "stm32-i3c" }
+
+#embassy-time = { path = "/home/matt/3rd/rs/embassy/embassy-time" }
+#embassy-stm32 = { path = "/home/matt/3rd/rs/embassy/embassy-stm32" }
+#stm32-metapac = { path = "/home/matt/3rd/rs/stm32-data/build/stm32-metapac" }
 
 [profile.release]
 debug = 2

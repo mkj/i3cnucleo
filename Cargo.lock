@@ -197,11 +197,11 @@ dependencies = [
 [[package]]
 name = "embassy-embedded-hal"
 version = "0.1.0"
-source = "git+https://github.com/embassy-rs/embassy?rev=99b4ea7c1dd5d2d10020ae569b878231c6c00524#99b4ea7c1dd5d2d10020ae569b878231c6c00524"
+source = "git+https://github.com/mkj/embassy?branch=stm32-i3c#6c43cd277d867aad7f20791c26ded41373a42d88"
 dependencies = [
  "defmt",
  "embassy-futures",
- "embassy-sync 0.2.0 (git+https://github.com/embassy-rs/embassy?rev=99b4ea7c1dd5d2d10020ae569b878231c6c00524)",
+ "embassy-sync 0.2.0 (git+https://github.com/mkj/embassy?branch=stm32-i3c)",
  "embedded-hal 0.2.7",
  "embedded-hal 1.0.0-alpha.10",
  "embedded-hal-async",
@@ -229,12 +229,12 @@ dependencies = [
 [[package]]
 name = "embassy-futures"
 version = "0.1.0"
-source = "git+https://github.com/embassy-rs/embassy?rev=99b4ea7c1dd5d2d10020ae569b878231c6c00524#99b4ea7c1dd5d2d10020ae569b878231c6c00524"
+source = "git+https://github.com/mkj/embassy?branch=stm32-i3c#6c43cd277d867aad7f20791c26ded41373a42d88"
 
 [[package]]
 name = "embassy-hal-common"
 version = "0.1.0"
-source = "git+https://github.com/embassy-rs/embassy?rev=99b4ea7c1dd5d2d10020ae569b878231c6c00524#99b4ea7c1dd5d2d10020ae569b878231c6c00524"
+source = "git+https://github.com/mkj/embassy?branch=stm32-i3c#6c43cd277d867aad7f20791c26ded41373a42d88"
 dependencies = [
  "cortex-m",
  "critical-section",
@@ -257,7 +257,7 @@ dependencies = [
 [[package]]
 name = "embassy-net-driver"
 version = "0.1.0"
-source = "git+https://github.com/embassy-rs/embassy?rev=99b4ea7c1dd5d2d10020ae569b878231c6c00524#99b4ea7c1dd5d2d10020ae569b878231c6c00524"
+source = "git+https://github.com/mkj/embassy?branch=stm32-i3c#6c43cd277d867aad7f20791c26ded41373a42d88"
 dependencies = [
  "defmt",
 ]
@@ -265,7 +265,7 @@ dependencies = [
 [[package]]
 name = "embassy-stm32"
 version = "0.1.0"
-source = "git+https://github.com/embassy-rs/embassy?rev=99b4ea7c1dd5d2d10020ae569b878231c6c00524#99b4ea7c1dd5d2d10020ae569b878231c6c00524"
+source = "git+https://github.com/mkj/embassy?branch=stm32-i3c#6c43cd277d867aad7f20791c26ded41373a42d88"
 dependencies = [
  "atomic-polyfill 1.0.2",
  "bit_field",
@@ -279,7 +279,7 @@ dependencies = [
  "embassy-futures",
  "embassy-hal-common",
  "embassy-net-driver",
- "embassy-sync 0.2.0 (git+https://github.com/embassy-rs/embassy?rev=99b4ea7c1dd5d2d10020ae569b878231c6c00524)",
+ "embassy-sync 0.2.0 (git+https://github.com/mkj/embassy?branch=stm32-i3c)",
  "embassy-time",
  "embassy-usb-driver",
  "embedded-hal 0.2.7",
@@ -318,7 +318,7 @@ dependencies = [
 [[package]]
 name = "embassy-sync"
 version = "0.2.0"
-source = "git+https://github.com/embassy-rs/embassy?rev=99b4ea7c1dd5d2d10020ae569b878231c6c00524#99b4ea7c1dd5d2d10020ae569b878231c6c00524"
+source = "git+https://github.com/mkj/embassy?branch=stm32-i3c#6c43cd277d867aad7f20791c26ded41373a42d88"
 dependencies = [
  "cfg-if",
  "critical-section",
@@ -331,7 +331,7 @@ dependencies = [
 [[package]]
 name = "embassy-time"
 version = "0.1.1"
-source = "git+https://github.com/embassy-rs/embassy?rev=99b4ea7c1dd5d2d10020ae569b878231c6c00524#99b4ea7c1dd5d2d10020ae569b878231c6c00524"
+source = "git+https://github.com/mkj/embassy?branch=stm32-i3c#6c43cd277d867aad7f20791c26ded41373a42d88"
 dependencies = [
  "atomic-polyfill 1.0.2",
  "cfg-if",
@@ -346,7 +346,7 @@ dependencies = [
 [[package]]
 name = "embassy-usb-driver"
 version = "0.1.0"
-source = "git+https://github.com/embassy-rs/embassy?rev=99b4ea7c1dd5d2d10020ae569b878231c6c00524#99b4ea7c1dd5d2d10020ae569b878231c6c00524"
+source = "git+https://github.com/mkj/embassy?branch=stm32-i3c#6c43cd277d867aad7f20791c26ded41373a42d88"
 dependencies = [
  "defmt",
 ]
@@ -730,8 +730,7 @@ dependencies = [
 [[package]]
 name = "stm32-metapac"
 version = "12.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7a361cae600f71ad0f1ba2163eb7b7681767fa86ffac685dc5b5f14c4a93aee1"
+source = "git+https://github.com/mkj/stm32-data-generated?branch=stm32-i3c#59cb4007cfab15c52a6c635eaa690ada5ff1f68e"
 dependencies = [
  "cortex-m",
  "cortex-m-rt",
